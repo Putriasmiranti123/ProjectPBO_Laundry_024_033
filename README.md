@@ -42,7 +42,7 @@ ProjectPBO_Laundry_024_033
 
 ---
 
-## 🗄️ Database Configuration
+## Database Configuration
 
 1. Buat database MySQL:
 
@@ -93,19 +93,7 @@ Konsep ini membantu kode menjadi:
 * lebih mudah dipelihara
 ---
 
-## 📸 Application Preview
-
-Tambahkan screenshot aplikasi di sini.
-
-Contoh:
-
-```md
-![Dashboard](screenshot/dashboard.png)
-```
-
----
-
-## 📖 Learning Objectives
+## Learning Objectives
 
 Project ini dibuat untuk mempelajari:
 
