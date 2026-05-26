@@ -29,9 +29,9 @@ public class PesananController {
         this.conn = DBConnection.getConnection();
     }
 
-    // ════════════════════════════════════════════════════════════════
+
     // TAMBAH pesanan baru
-    // ════════════════════════════════════════════════════════════════
+
     public boolean tambahPesanan(String namaPelanggan, int idLayanan, double beratKg, String status) {
     if (namaPelanggan == null || namaPelanggan.trim().isEmpty()) {
         throw new IllegalArgumentException("Nama pelanggan tidak boleh kosong.");
@@ -60,9 +60,9 @@ public class PesananController {
     }
 }
 
-    // ════════════════════════════════════════════════════════════════
+
     // AMBIL semua pesanan
-    // ════════════════════════════════════════════════════════════════
+
     public List<PesananDTO> getAllPesanan() {
         List<PesananDTO> list = new ArrayList<>();
         String sql = "SELECT p.id_pesanan, p.nama_pelanggan, l.id_layanan, l.nama_layanan, "
@@ -81,9 +81,9 @@ public class PesananController {
         return list;
     }
 
-    // ════════════════════════════════════════════════════════════════
+
     // UPDATE pesanan
-    // ════════════════════════════════════════════════════════════════
+
     public boolean updatePesanan(int idPesanan, String namaPelanggan, int idLayanan, double beratKg, String status) {
         if (namaPelanggan == null || namaPelanggan.trim().isEmpty()) {
             throw new IllegalArgumentException("Nama pelanggan tidak boleh kosong.");
@@ -114,9 +114,9 @@ public class PesananController {
         }
     }
 
-    // ════════════════════════════════════════════════════════════════
+
     // UPDATE status saja
-    // ════════════════════════════════════════════════════════════════
+
     public boolean updateStatus(int idPesanan, String statusBaru) {
         String sql = "UPDATE pesanan SET status=? WHERE id_pesanan=?";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -129,9 +129,9 @@ public class PesananController {
         }
     }
 
-    // ════════════════════════════════════════════════════════════════
+ 
     // DELETE pesanan
-    // ════════════════════════════════════════════════════════════════
+ 
     public boolean deletePesanan(int idPesanan) {
         String sql = "DELETE FROM pesanan WHERE id_pesanan=?";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -143,9 +143,9 @@ public class PesananController {
         }
     }
 
-    // ════════════════════════════════════════════════════════════════
+
     // HELPER — mapping ResultSet → PesananDTO
-    // ════════════════════════════════════════════════════════════════
+ 
     private PesananDTO mapDTO(ResultSet rs) throws SQLException {
         double totalBiaya = rs.getDouble("total_biaya"); //Encapsulation: Method private hanya digunakan di dalam class ini.
         NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("id", "ID")); //Format mata uang Rupiah
