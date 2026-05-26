@@ -76,7 +76,7 @@ git clone https://github.com/Putriasmiranti123/ProjectPBO_Laundry_024_033.git
 
    * MySQL sudah aktif
    * JDBC Driver sudah ditambahkan ke library project
-
+4. Buat database dengan nama db_laundry
 4. Jalankan file main.
 ---
 
